@@ -21,11 +21,6 @@ Loads environment variables from .env for nodejs projects.
 ```
 pnpm add dotenv
 ```
-## Nodemon 
-Monitor for any changes in your node.js application and automatically restart the server
-```
-pnpm add -D nodemon
-```
 ## Morgan 
 HTTP request logger middleware for node.js 
 ```
@@ -111,7 +106,10 @@ JavaScript Style Guide, with linter & automatic code fixer.
 ```
 pnpm add -g standard
 ```
-
+## Run
+```
+pnpm start
+```
 
 ## Install all dependencies of the project
 ```
