@@ -1,118 +1,67 @@
 # Overlord.js
-Create project, install basic dependencies and connect with postgresql.
+Create controllers, routes, services and generate model with sequelize. 
 
-## Create project
+## Create folder controllers and create file
 ```
-npm init
-```
-## PnpM
-Fast, disk space efficient package manager
-https://pnpm.io/
-```
-curl -fsSL https://get.pnpm.io/install.sh | sh -
-```
-## Express
-Fast, unopinionated, minimalist web framework for Node.js.
-```
-pnpm add express 
-```
-## Dotenv 
-Loads environment variables from .env for nodejs projects. 
-```
-pnpm add dotenv
-```
-## Morgan 
-HTTP request logger middleware for node.js 
-```
-pnpm add -D morgan
-```
-## Run
-```
-pnpm start
-```
-## Test with httpie
-A simple yet powerful command-line HTTP and API testing client for the API era.
-https://httpie.io/
-```
-http localhost:5000
-```
-## PostgreSQL
-```
-sudo su - postgres
+mkdir src/version/controllers
 ```
 ```
-psql
+touch src/version/controllers/version.js
 ```
-## Create database
+## Create folder routes and create file
 ```
-create database overlord_js;
+touch src/version/routes.js
 ```
-## Create user database
+## Create model user
 ```
-create user overlord_js with encrypted password 'o';
+sequelize model:generate --name User --attributes \
+username:string,\
+password:string,\
+email:string,\
+status:boolean \
+--underscored
 ```
-## Grant privileges
+## Migrate
 ```
-grant all privileges on database overlord_js to overlord_js;
+sequelize db:migrate
 ```
-## Show path of the pg_hba.conf file
 ```
-show hba_file;
+sequelize db:migrate:undo
 ```
-## Add the next line in pg_hba.conf file
+## Create seeder
 ```
-local   all             overlord_js                             trust
+sequelize seed:create --name users
 ```
-## Restart postgresql service
+## Seed
 ```
-sudo systemctl restart postgresql
+sequelize db:seed:all
 ```
-## Access to overlord_js database with overlord_js user from psql 
 ```
-psql -d overlord_js -U overlord_js -W
+sequelize db:seed:undo:all
 ```
-## Sequelize
-Feature-rich ORM for modern Node.js and TypeScript.
+## Create folder utils
 ```
-pnpm add sequelize
+mkdir src/utils
 ```
-## pg and pg-hstore
-PostgreSQL client for node.js and a node package for serializing and deserializing JSON data to hstore format.
+## Create file password.js
 ```
-pnpm add pg pg-hstore
+touch src/utils/password.js
 ```
-## sequelize-cli
-The Sequelize CLI 
+## bcrypt
+A library to help you hash passwords.
 ```
-pnpm add -g sequelize-cli
+pnpm add bcrypt
 ```
-## Create configuration file
-This is a special configuration file. It lets you specify the following options that you would usually pass as arguments to CLI:
-* env: The environment to run the command in
-* config: The path to the config file
-* migrations-path: The path to the migrations folder
-* seeders-path: The path to the seeders folder
-* models-path: The path to the models folder
+## Create services folder for user 
 ```
-touch .sequelizerc
+mkdir src/user/services
 ```
-## sequelize init
-Get into src folder and run 
+## Create controller folder for user
 ```
-sequelize init
+mkdir src/user/controllers
 ```
-## standard
-JavaScript Style Guide, with linter & automatic code fixer.
+## generate-password 
+NodeJS library for generating cryptographically-secure passwords.
 ```
-pnpm add -g standard
+pnpm add generate-password
 ```
-## Run
-```
-pnpm start
-```
-
-## Install all dependencies of the project
-```
-pnpm i
-```
-
