@@ -3,6 +3,7 @@ const { validationResult } = require('express-validator')
 
 const userService = require('../services')
 const { errorMessage } = require('../../utils/error-message')
+const register = require('./helpers/is-username-or-email-register')
 
 /**
  * @name Update user
@@ -29,7 +30,7 @@ exports.update = async (req, res) => {
 
     const { username, email, password, status } = req.body
 
-    const isUserExist = await isUsernameOrEmailRegister(username, email)
+    const isUserExist = await register.isUsernameOrEmailRegister(username, email)
 
     if (isUserExist.exist) {
       return res.status(404).json(
@@ -54,26 +55,4 @@ exports.update = async (req, res) => {
       errorMessage(error, req)
     )
   }
-}
-
-async function isUsernameOrEmailRegister (username, email) {
-  let userExist = await userService.getByUsername(username)
-
-  if (userExist) {
-    return {
-      exist: true,
-      message: `The username ${username} already exist`
-    }
-  }
-
-  userExist = await userService.getByEmail(email)
-
-  if (userExist) {
-    return {
-      exist: true,
-      message: `The email ${email} already exist`
-    }
-  }
-
-  return { exist: false, message: '' }
 }
