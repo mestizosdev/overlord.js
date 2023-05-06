@@ -1,4 +1,4 @@
-/** @module controllers/get-user-by-id */
+/** @module user/controllers/get-user-by-id */
 const { validationResult } = require('express-validator')
 
 const userService = require('../services')

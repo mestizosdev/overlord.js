@@ -1,4 +1,4 @@
-/** @module controllers/remove-user */
+/** @module user/controllers/remove-user */
 const userService = require('../services')
 
 const { validationResult } = require('express-validator')

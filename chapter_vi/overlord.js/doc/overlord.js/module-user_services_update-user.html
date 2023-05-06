@@ -3,7 +3,7 @@
 <head>
     
     <meta charset="utf-8">
-    <title>role/services/create-role.js - Documentation</title>
+    <title>user/services/update-user - Documentation</title>
     
     
     <script src="scripts/prettify/prettify.js"></script>
@@ -35,37 +35,281 @@
 
 <div id="main">
     
-    <h1 class="page-title">role/services/create-role.js</h1>
+    <h1 class="page-title">user/services/update-user</h1>
     
 
     
 
 
 
+
+<section>
+
+<header>
     
-    <section>
-        <article>
-            <pre class="prettyprint source linenums"><code>/** @module role/services/create-role */
-const db = require('../../models')
+</header>
 
-/**
- * Create role
- *
- * @async
- * @param {Role} create - Role to create
- * @returns {Role} role
- */
-exports.create = async (roleNew) => {
-  const role = db.Role.build({
-    name: roleNew.name,
-    observation: roleNew.observation
-  })
+<article>
+    
+        <div class="container-overview">
+        
+            
 
-  return await role.save()
-}
-</code></pre>
-        </article>
-    </section>
+<dl class="details">
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="user_services_update-user.js.html">user/services/update-user.js</a>, <a href="user_services_update-user.js.html#line1">line 1</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+            
+
+            
+        
+        </div>
+    
+
+    
+
+    
+
+    
+    
+    
+
+     
+
+    
+
+    
+
+    
+        <h3 class="subsection-title">Methods</h3>
+
+        
+            
+
+    
+
+    <h4 class="name" id=".update"><span class="type-signature type-signature-async, static">(async, static) </span>update<span class="signature">(userToUpdate, userWithNewData)</span><span class="type-signature"> &rarr; {User}</span></h4>
+
+    
+
+
+
+
+<dl class="details">
+    
+    <dt class="tag-description">Description:</dt>
+    <dd class="tag-description"><ul class="dummy"><li>Update user</li></ul></dd>
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="user_services_update-user.js.html">user/services/update-user.js</a>, <a href="user_services_update-user.js.html#line15">line 15</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h5 class="h5-parameters">Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>userToUpdate</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">User</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">Current user to update</td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>userWithNewData</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">User</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">User with new data</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5 class="h5-returns">Returns:</h5>
+
+        
+
+
+<dl class="param-type">
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">User</span>
+
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+        
+    
+
+    
+
+    
+</article>
+
+</section>
 
 
 

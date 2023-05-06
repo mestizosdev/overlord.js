@@ -1,4 +1,4 @@
-/** @module controllers/create-user */
+/** @module user/controllers/create-user */
 const { validationResult } = require('express-validator')
 
 const userService = require('../services')

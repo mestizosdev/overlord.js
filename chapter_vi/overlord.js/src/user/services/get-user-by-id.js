@@ -1,4 +1,4 @@
-/** @module services/get-user-by-id */
+/** @module user/services/get-user-by-id */
 const db = require('../../models')
 
 /**

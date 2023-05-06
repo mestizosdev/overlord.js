@@ -1,4 +1,4 @@
-/** @module services/remove-user */
+/** @module user/services/remove-user */
 
 /**
  * Delete user

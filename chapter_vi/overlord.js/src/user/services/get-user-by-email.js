@@ -1,4 +1,4 @@
-/** @module services/user */
+/** @module user/services/user */
 const db = require('../../models')
 
 /**

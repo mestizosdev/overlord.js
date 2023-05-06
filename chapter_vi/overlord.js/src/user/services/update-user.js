@@ -1,4 +1,4 @@
-/** @module services/update-user */
+/** @module user/services/update-user */
 const { ValidationError } = require('sequelize')
 
 const passwordUtil = require('../../utils/password')
