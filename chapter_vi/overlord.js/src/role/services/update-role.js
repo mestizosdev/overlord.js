@@ -11,8 +11,9 @@ const ErrorDatabase = require('../../utils/error-database')
  * @param {boolean} status - Status of role
  * @returns {Role}
  */
-exports.update = async (role, status) => {
+exports.update = async (role, observation, status) => {
   return await role.update({
+    observation,
     status
   }).catch((error) => {
     if (error instanceof ValidationError) {

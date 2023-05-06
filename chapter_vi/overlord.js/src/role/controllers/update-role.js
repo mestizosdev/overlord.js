@@ -20,8 +20,7 @@ exports.update = async (req, res) => {
       )
     }
 
-    const roleName = req.params.name
-    const role = await roleService.getByName(roleName)
+    const role = await roleService.getByName(req.params.name)
 
     if (!role) {
       return res.status(404).json(
@@ -29,21 +28,14 @@ exports.update = async (req, res) => {
       )
     }
 
-    const { status } = req.body
+    const { observation, status } = req.body
 
-    const isRoleExist = await register.isRoleRegister(roleName)
-
-    if (isRoleExist.exist) {
-      return res.status(404).json(
-        errorMessage(isRoleExist.message, req)
-      )
-    }
-
-    const roleUpdated = await roleService.update(role, status)
+    const roleUpdated = await roleService.update(role, observation, status)
 
     res.status(200).json({
       id: roleUpdated.id,
       name: roleUpdated.name,
+      observation: roleUpdated.observation,
       status: roleUpdated.status
     })
   } catch (error) {
