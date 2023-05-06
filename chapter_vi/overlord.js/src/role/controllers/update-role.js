@@ -3,7 +3,6 @@ const { validationResult } = require('express-validator')
 
 const roleService = require('../services')
 const { errorMessage } = require('../../utils/error-message')
-const register = require('./helpers/is-role-register')
 
 /**
  * @name Update role
