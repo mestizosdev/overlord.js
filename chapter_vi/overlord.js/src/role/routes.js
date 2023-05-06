@@ -1,8 +1,13 @@
 const express = require('express')
 const router = express.Router()
-const { body } = require('express-validator')
+const { body, param } = require('express-validator')
 
-const { create } = require('./controllers/index')
+const { create, getByName } = require('./controllers/index')
+
+router.get('/overlord/v1/role/:name',
+  param('name').notEmpty()
+    .withMessage('Should have a value'),
+  getByName)
 
 router.post('/overlord/v1/role',
   body('name')

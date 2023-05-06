@@ -1,11 +1,11 @@
-/** @module role/services/get-role-by-role */
+/** @module role/services/get-role-by-name */
 const db = require('../../models')
 
 /**
- * Get role by role
+ * Get role by name
  *
  * @async
- * @param {string} role - role
+ * @param {string} name
  * @returns {Role} role
 */
 exports.getByName = async (name) => {
