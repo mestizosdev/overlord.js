@@ -21,6 +21,6 @@ inner join adm_users as u
 on
 	a.user_id = u.id
 where
-	a.read = 'Si'
+	a.read = true
 	and a.status = true
 	and mod.status = true;

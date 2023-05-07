@@ -10,16 +10,16 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       read: {
-        type: Sequelize.STRING
+        type: Sequelize.BOOLEAN
       },
       create: {
-        type: Sequelize.STRING
+        type: Sequelize.BOOLEAN
       },
       modify: {
-        type: Sequelize.STRING
+        type: Sequelize.BOOLEAN
       },
       delete: {
-        type: Sequelize.STRING
+        type: Sequelize.BOOLEAN
       },
       status: {
         type: Sequelize.BOOLEAN

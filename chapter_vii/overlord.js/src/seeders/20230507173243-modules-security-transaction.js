@@ -9,10 +9,18 @@ module.exports = {
       and name = 'Transaction';`
     )
 
+    await queryInterface.bulkInsert('adm_roles', [{
+      name: 'password',
+      observation: 'Change password'
+    }, {
+      name: 'access',
+      observation: 'Access'
+    }], {})
+
     await security[0].forEach(value => {
       queryInterface.bulkInsert('adm_modules', [
-        { name: 'Change Password', module_id: value.id },
-        { name: 'Access', module_id: value.id }
+        { name: 'Change Password', role: 'password', module_id: value.id },
+        { name: 'Access', role: 'access', module_id: value.id }
       ], { })
     })
   },

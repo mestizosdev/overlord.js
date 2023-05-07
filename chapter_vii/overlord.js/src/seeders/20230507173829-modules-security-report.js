@@ -9,9 +9,14 @@ module.exports = {
       and name = 'Report';`
     )
 
+    await queryInterface.bulkInsert('adm_roles', [{
+      name: 'rep_list_user',
+      observation: 'Report list user'
+    }], {})
+
     await security[0].forEach(value => {
       queryInterface.bulkInsert('adm_modules', [
-        { name: 'List of Users', module_id: value.id }
+        { name: 'List of Users', role: 'rep_list_user', module_id: value.id }
       ], { })
     })
   },

@@ -9,10 +9,18 @@ module.exports = {
       and name = 'Manage';`
     )
 
+    await queryInterface.bulkInsert('adm_roles', [{
+      name: 'user',
+      observation: 'Manage users'
+    }, {
+      name: 'module',
+      observation: 'Manage modules'
+    }], {})
+
     await security[0].forEach(value => {
       queryInterface.bulkInsert('adm_modules', [
-        { name: 'Users', module_id: value.id },
-        { name: 'Modules', module_id: value.id }
+        { name: 'Users', role: 'user', module_id: value.id },
+        { name: 'Modules', role: 'module', module_id: value.id }
       ], { })
     })
   },
