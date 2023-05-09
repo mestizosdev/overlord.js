@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="utf-8">
+    <title>user/services/create-user - Documentation</title>
+    
+    
+    <script src="scripts/prettify/prettify.js"></script>
+    <script src="scripts/prettify/lang-css.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc.css">
+    <script src="scripts/nav.js" defer></script>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+
+<input type="checkbox" id="nav-trigger" class="nav-trigger" />
+<label for="nav-trigger" class="navicon-button x">
+  <div class="navicon"></div>
+</label>
+
+<label for="nav-trigger" class="overlay"></label>
+
+<nav >
+    
+    
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="module-models_user-User.html">User</a></li></ul><h3>Modules</h3><ul><li><a href="module-controllers_helpers_isUsernameOrEmailRegister.html">controllers/helpers/isUsernameOrEmailRegister</a></li><li><a href="module-controllers_version.html">controllers/version</a></li><li><a href="module-middleware_error.html">middleware/error</a></li><li><a href="module-models_user.html">models/user</a></li><li><a href="module-role_controllers_create-role.html">role/controllers/create-role</a></li><li><a href="module-role_controllers_helpers_isRoleRegister.html">role/controllers/helpers/isRoleRegister</a></li><li><a href="module-role_services_create-role.html">role/services/create-role</a><ul class='methods'><li data-type='method'><a href="module-role_services_create-role.html#.create">create</a></li></ul></li><li><a href="module-role_services_get-role-by-role.html">role/services/get-role-by-role</a><ul class='methods'><li data-type='method'><a href="module-role_services_get-role-by-role.html#.getByName">getByName</a></li></ul></li><li><a href="module-user_controllers_create-user.html">user/controllers/create-user</a></li><li><a href="module-user_controllers_get-user-by-id.html">user/controllers/get-user-by-id</a></li><li><a href="module-user_controllers_remove-user.html">user/controllers/remove-user</a></li><li><a href="module-user_controllers_update-user.html">user/controllers/update-user</a></li><li><a href="module-user_services_create-user.html">user/services/create-user</a><ul class='methods'><li data-type='method'><a href="module-user_services_create-user.html#.create">create</a></li></ul></li><li><a href="module-user_services_get-user-by-id.html">user/services/get-user-by-id</a><ul class='methods'><li data-type='method'><a href="module-user_services_get-user-by-id.html#.getById">getById</a></li></ul></li><li><a href="module-user_services_get-user-by-username.html">user/services/get-user-by-username</a><ul class='methods'><li data-type='method'><a href="module-user_services_get-user-by-username.html#.getByUsername">getByUsername</a></li></ul></li><li><a href="module-user_services_remove-user.html">user/services/remove-user</a><ul class='methods'><li data-type='method'><a href="module-user_services_remove-user.html#.remove">remove</a></li></ul></li><li><a href="module-user_services_update-user.html">user/services/update-user</a><ul class='methods'><li data-type='method'><a href="module-user_services_update-user.html#.update">update</a></li></ul></li><li><a href="module-user_services_user.html">user/services/user</a><ul class='methods'><li data-type='method'><a href="module-user_services_user.html#.getByEmail">getByEmail</a></li></ul></li><li><a href="module-util_error-message.html">util/error-message</a><ul class='methods'><li data-type='method'><a href="module-util_error-message.html#.errorMessage">errorMessage</a></li></ul></li><li><a href="module-util_password.html">util/password</a><ul class='methods'><li data-type='method'><a href="module-util_password.html#.encrypt">encrypt</a></li><li data-type='method'><a href="module-util_password.html#.generate">generate</a></li></ul></li><li><a href="module-utils_logger.html">utils/logger</a></li></ul>
+    
+</nav>
+
+<div id="main">
+    
+    <h1 class="page-title">user/services/create-user</h1>
+    
+
+    
+
+
+
+
+<section>
+
+<header>
+    
+</header>
+
+<article>
+    
+        <div class="container-overview">
+        
+            
+
+<dl class="details">
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="user_services_create-user.js.html">user/services/create-user.js</a>, <a href="user_services_create-user.js.html#line1">line 1</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+            
+
+            
+        
+        </div>
+    
+
+    
+
+    
+
+    
+    
+    
+
+     
+
+    
+
+    
+
+    
+        <h3 class="subsection-title">Methods</h3>
+
+        
+            
+
+    
+
+    <h4 class="name" id=".create"><span class="type-signature type-signature-async, static">(async, static) </span>create<span class="signature">(create)</span><span class="type-signature"> &rarr; {User}</span></h4>
+
+    
+
+
+
+
+<dl class="details">
+    
+    <dt class="tag-description">Description:</dt>
+    <dd class="tag-description"><ul class="dummy"><li>Create user</li></ul></dd>
+    
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="user_services_create-user.js.html">user/services/create-user.js</a>, <a href="user_services_create-user.js.html#line12">line 12</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <h5 class="h5-parameters">Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>create</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">User</span>
+
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last">User to create</td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5 class="h5-returns">Returns:</h5>
+
+        
+<div class="param-desc">
+    user
+</div>
+
+
+
+<dl class="param-type">
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type">User</span>
+
+
+
+    </dd>
+</dl>
+
+    
+
+
+
+        
+    
+
+    
+
+    
+</article>
+
+</section>
+
+
+
+
+    
+    
+</div>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 4.0.2</a> on Fri May 05 2023 20:11:30 GMT-0500 (Ecuador Time) using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
+</footer>
+
+<script>prettyPrint();</script>
+<script src="scripts/polyfill.js"></script>
+<script src="scripts/linenumber.js"></script>
+
+
+
+</body>
+</html>
