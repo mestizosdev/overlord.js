@@ -19,6 +19,7 @@ const endpointsFiles = [
   'src/user/routes.js',
   'src/role/routes.js',
   'src/module/routes.js',
+  'src/authentication/routes.js',
   'src/version/routes.js'
 ]
 

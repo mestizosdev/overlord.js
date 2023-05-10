@@ -1,4 +1,5 @@
-exports.version = require('./version/routes')
+exports.authentication = require('./authentication/routes')
 exports.user = require('./user/routes')
 exports.role = require('./role/routes')
 exports.module = require('./module/routes')
+exports.version = require('./version/routes')

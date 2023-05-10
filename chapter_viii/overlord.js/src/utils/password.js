@@ -33,3 +33,14 @@ module.exports.generate = () => {
 
   return password
 }
+
+/**
+ * Compare password
+ *
+ * @returns {boolean}
+*/
+module.exports.compare = (password, encryptedPassword) => {
+  const isMatch = bcrypt.compare(password, encryptedPassword)
+
+  return isMatch
+}
