@@ -4,7 +4,7 @@
   "description": "Administrator for Users, modules and access",
   "main": "app.js",
   "scripts": {
-    "start": "node --watch src/app.js",
+    "start": "nodemon src/app.js",
     "doc": "jsdoc -c jsdoc.json",
     "standard": "standard src --fix",
     "swagger": "node src/swagger.js",
@@ -33,6 +33,7 @@
     "jsdoc-http-plugin": "^0.3.2",
     "mocha": "^10.2.0",
     "morgan": "^1.10.0",
+    "nodemon": "^2.0.22",
     "swagger-autogen": "^2.23.1",
     "swagger-ui-express": "^4.6.2"
   }
