@@ -43,7 +43,7 @@ exports.login = async (req, res) => {
   // Convert roles query in array
   const roleArray = []
   for (const i in roles) {
-    roleArray.push(roles[i].rolename)
+    roleArray.push(roles[i].role)
   }
 
   try {
