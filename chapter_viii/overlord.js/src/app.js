@@ -20,6 +20,7 @@ app.use(routes.authentication)
 app.use(routes.user)
 app.use(routes.role)
 app.use(routes.module)
+app.use(routes.access)
 app.use(routes.version)
 app.use(errorHandler)
 

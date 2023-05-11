@@ -369,6 +369,35 @@
         }
       }
     },
+    "/overlord/v1/access/{userId}": {
+      "get": {
+        "tags": [
+          "Access"
+        ],
+        "description": "",
+        "parameters": [
+          {
+            "name": "userId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "404": {
+            "description": "Not Found"
+          },
+          "422": {
+            "description": "Unprocessable Entity"
+          }
+        }
+      }
+    },
     "/overlord/v1/login": {
       "post": {
         "tags": [

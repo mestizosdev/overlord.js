@@ -16,6 +16,11 @@ module.exports = (sequelize, DataTypes) => {
         foreignKey: 'module_id',
         as: 'module'
       })
+      Access.belongsTo(models.ModuleView, {
+        targetKey: 'id',
+        foreignKey: 'module_id',
+        as: 'moduleView'
+      })
     }
   }
   Access.init({
