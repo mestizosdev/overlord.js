@@ -1,13 +1,14 @@
-/** @module module/controllers/get-module-by-id */
+/** @module module/controllers/remove-module */
+const moduleService = require('../services')
+
 const { validationResult } = require('express-validator')
 
-const moduleService = require('../services')
 const { errorMessage } = require('../../utils/error-message')
 /**
- * @name Get module by id
- * @path {GET} /overlord/v1/module/:id
+ * @name Delete module
+ * @path {DELETE} /overlord/v1/module/:id
 */
-exports.getById = async (req, res) => {
+exports.remove = async (req, res) => {
   // #swagger.tags = ['Module']
   const errors = validationResult(req)
 
@@ -17,7 +18,7 @@ exports.getById = async (req, res) => {
     )
   }
 
-  const module = await moduleService.getViewById(req.params.id)
+  const module = await moduleService.getById(req.params.id)
 
   if (!module) {
     const message = 'Module don\'t exist'
@@ -26,16 +27,10 @@ exports.getById = async (req, res) => {
     )
   }
 
+  await moduleService.remove(module)
+
   return res.status(200).json({
     id: module.id,
-    name: module.name,
-    parent: module.parent,
-    path: module.path,
-    role: module.role,
-    icon: module.icon,
-    link: module.link,
-    level: module.level,
-    moduleId: module.moduleId,
-    status: module.status
+    description: module.name
   })
 }

@@ -2,15 +2,15 @@
 const db = require('../../models')
 
 /**
- * Get module
+ * Get module view
  *
  * @async
  * @param {number} getById - Module Id
- * @returns {Module} module
+ * @returns {module} module
 */
-exports.getById = async (moduleId) => {
-  const module = await db.ModuleView.findOne({
-    where: { id: moduleId }
+exports.getById = async (id) => {
+  const module = await db.Module.findOne({
+    where: { id }
   })
 
   if (module) {
