@@ -35,5 +35,6 @@ module.exports = {
 
   async down (queryInterface, Sequelize) {
     await queryInterface.bulkDelete('adm_modules', null, {})
+    await queryInterface.bulkDelete('adm_roles', null, {})
   }
 }

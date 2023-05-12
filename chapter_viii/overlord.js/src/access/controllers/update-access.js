@@ -27,9 +27,9 @@ exports.update = async (req, res) => {
     )
   }
 
-  const moduleView = moduleService.getById(access.moduleId)
+  const module = moduleService.getById(access.moduleId)
 
-  if (!moduleView.role) {
+  if (!module.role) {
     const message = 'Module role don\'t exist'
     return res.status(404).json(
       errorMessage(message, req)
@@ -37,6 +37,6 @@ exports.update = async (req, res) => {
   }
 
   return res.status(200).json({
-    moduleView
+    module
   })
 }
