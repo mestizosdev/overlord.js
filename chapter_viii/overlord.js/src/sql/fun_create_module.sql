@@ -6,13 +6,13 @@ declare
 	r record;
 	v_count integer;
 	cur_users cursor for
-		select username from adm_users;
+		select id from adm_users;
 BEGIN
 
 	for u in cur_users loop
 		insert into adm_access(
 		  status, module_id, user_id)
-		  values (true, new.id, u.user_id);
+		  values (true, new.id, u.id);
 	end loop;
 
 	return new;
