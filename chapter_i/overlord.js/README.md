@@ -55,6 +55,9 @@ create user overlord_js with encrypted password 'o';
 ```
 grant all privileges on database overlord_js to overlord_js;
 ```
+```
+alter user overlord_js createdb;
+```
 ## Show path of the pg_hba.conf file
 ```
 show hba_file;
@@ -106,13 +109,12 @@ JavaScript Style Guide, with linter & automatic code fixer.
 ```
 pnpm add -g standard
 ```
-## Run
-```
-pnpm start
-```
-
 ## Install all dependencies of the project
 ```
 pnpm i
+```
+## Run
+```
+pnpm start
 ```
 

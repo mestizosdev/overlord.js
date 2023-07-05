@@ -28,4 +28,11 @@ Only scan src folder
 ```
 "standard": "standard src --fix"
 ```
-
+## Install all dependencies of the project
+```
+pnpm i
+```
+## Run
+```
+pnpm start
+```

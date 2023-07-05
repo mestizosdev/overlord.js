@@ -65,3 +65,11 @@ NodeJS library for generating cryptographically-secure passwords.
 ```
 pnpm add generate-password
 ```
+## Install all dependencies of the project
+```
+pnpm i
+```
+## Run
+```
+pnpm start
+```
