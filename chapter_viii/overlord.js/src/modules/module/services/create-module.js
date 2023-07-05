@@ -1,5 +1,5 @@
 /** @module module/services/create-module */
-const db = require('../../models')
+const db = require('../../../models')
 
 /**
  * Create module

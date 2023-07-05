@@ -1,5 +1,5 @@
 /** @module user/services/user */
-const db = require('../../models')
+const db = require('../../../models')
 
 /**
  * Get user by email

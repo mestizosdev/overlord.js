@@ -1,5 +1,5 @@
 /** @module user/services/get-user-by-id */
-const db = require('../../models')
+const db = require('../../../models')
 
 /**
  * Get user

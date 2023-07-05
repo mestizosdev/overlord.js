@@ -1,5 +1,5 @@
 /** @module access/services/get-access-by-id */
-const db = require('../../models')
+const db = require('../../../models')
 
 /**
  * Get access by id

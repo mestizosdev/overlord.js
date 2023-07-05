@@ -1,5 +1,5 @@
 /** @module middleware/error */
-const { errorMessage } = require('../utils/error-message')
+const { errorMessage } = require('../modules/utils/error-message')
 
 /**
  * Handle errors, for example: not valid json body

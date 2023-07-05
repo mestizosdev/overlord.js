@@ -1,5 +1,5 @@
 /** @module module/services/get-module-by-id */
-const db = require('../../models')
+const db = require('../../../models')
 
 /**
  * Get module view

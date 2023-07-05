@@ -1,5 +1,5 @@
 /** @module role/services/create-role */
-const db = require('../../models')
+const db = require('../../../models')
 
 /**
  * Create role

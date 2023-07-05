@@ -1,5 +1,5 @@
 /** @module authentication/services/get-roles-by-user-id */
-const db = require('../../models')
+const db = require('../../../models')
 
 /**
  * Get roles by user id

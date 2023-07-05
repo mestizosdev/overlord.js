@@ -13,13 +13,13 @@ if (config.use_env_variable) {
   sequelize = new Sequelize(config.database, config.username, config.password, config)
 }
 
-const Access = require('../access/access.model')(sequelize, Sequelize.DataTypes)
-const AccessView = require('../access/accessview.model')(sequelize, Sequelize.DataTypes)
-const Module = require('../module/module.model')(sequelize, Sequelize.DataTypes)
-const ModuleView = require('../module/moduleview.model')(sequelize, Sequelize.DataTypes)
-const Role = require('../role/role.model')(sequelize, Sequelize.DataTypes)
-const User = require('../user/user.model')(sequelize, Sequelize.DataTypes)
-const UserRole = require('../user/userrole.model')(sequelize, Sequelize.DataTypes)
+const Access = require('../modules/access/access.model')(sequelize, Sequelize.DataTypes)
+const AccessView = require('../modules/access/accessview.model')(sequelize, Sequelize.DataTypes)
+const Module = require('../modules/module/module.model')(sequelize, Sequelize.DataTypes)
+const ModuleView = require('../modules/module/moduleview.model')(sequelize, Sequelize.DataTypes)
+const Role = require('../modules/role/role.model')(sequelize, Sequelize.DataTypes)
+const User = require('../modules/user/user.model')(sequelize, Sequelize.DataTypes)
+const UserRole = require('../modules/user/userrole.model')(sequelize, Sequelize.DataTypes)
 
 const db = {
   Access,

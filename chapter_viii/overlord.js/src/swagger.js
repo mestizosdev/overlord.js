@@ -16,12 +16,12 @@ const doc = {
 
 const outputFile = '../swagger.json'
 const endpointsFiles = [
-  'src/user/routes.js',
-  'src/role/routes.js',
-  'src/module/routes.js',
-  'src/access/routes.js',
-  'src/authentication/routes.js',
-  'src/version/routes.js'
+  'src/modules/user/routes.js',
+  'src/modules/role/routes.js',
+  'src/modules/module/routes.js',
+  'src/modules/access/routes.js',
+  'src/modules/authentication/routes.js',
+  'src/modules/version/routes.js'
 ]
 
 swaggerAutogen(outputFile, endpointsFiles, doc)

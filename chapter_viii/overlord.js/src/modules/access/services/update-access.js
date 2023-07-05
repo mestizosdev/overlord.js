@@ -1,5 +1,5 @@
 /** @module access/services/update-access */
-const db = require('../../models')
+const db = require('../../../models')
 
 /**
  * Update access

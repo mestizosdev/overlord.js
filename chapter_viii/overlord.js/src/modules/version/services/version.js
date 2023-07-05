@@ -1,4 +1,4 @@
-const db = require('../../models')
+const db = require('../../../models')
 const { QueryTypes } = require('sequelize')
 
 exports.getVersion = async () => {

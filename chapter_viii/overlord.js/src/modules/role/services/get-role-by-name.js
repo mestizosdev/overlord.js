@@ -1,5 +1,5 @@
 /** @module role/services/get-role-by-name */
-const db = require('../../models')
+const db = require('../../../models')
 
 /**
  * Get role by name

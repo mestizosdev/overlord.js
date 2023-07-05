@@ -1,5 +1,5 @@
 /** @module user/services/create-user */
-const db = require('../../models')
+const db = require('../../../models')
 const passwordUtil = require('../../utils/password')
 
 /**

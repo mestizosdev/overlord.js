@@ -1,5 +1,5 @@
 /** @module module/services/get-main-modules */
-const db = require('../../models')
+const db = require('../../../models')
 
 /**
  * Get main modules

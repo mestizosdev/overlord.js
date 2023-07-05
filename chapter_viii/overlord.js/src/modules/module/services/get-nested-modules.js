@@ -1,7 +1,7 @@
 /** @module module/services/get-module-by-id */
 const { QueryTypes } = require('sequelize')
 
-const db = require('../../models')
+const db = require('../../../models')
 
 /**
  * Get nested modules
