@@ -48,5 +48,12 @@ sequelize-cli seed:generate --name modules
 ```
 sequelize-cli seed:generate --name security
 ```
-
+## Install all dependencies of the project
+```
+pnpm i
+```
+## Run
+```
+pnpm start
+```
 
