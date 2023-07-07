@@ -1,5 +1,5 @@
 'use strict'
-const passwordUtil = require('../utils/password')
+const passwordUtil = require('../modules/utils/password')
 
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
